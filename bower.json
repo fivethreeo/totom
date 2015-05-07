@@ -1,0 +1,19 @@
+{
+  "name": "responsive_css3",
+  "version": "0.0.0",
+  "authors": [
+    "Øyvind Saltvik <oyvind.saltvik@gmail.com>"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "lesshat": "~3.0.2"
+  }
+}
