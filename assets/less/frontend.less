@@ -162,10 +162,11 @@ footer {
   .loop((@counter - 1));    // next iteration
     @name: ~"slidein@{counter}";
     .keyframes(@name, {
-      left: unit(`Math.floor(600 * Math.sin(Math.random() * 360))`, px);
-      top: unit(`Math.floor(600 * Math.cos(Math.random() * 360))`, px);
+      left: unit(`Math.floor(200 * Math.sin(Math.random() * 360))`, px);
+      top: unit(`Math.floor(200 * Math.cos(Math.random() * 360))`, px); 
+      opacity: 0; 
       },
-      { left: 0px; top: 0px; }
+      { left: 0px; top: 0px; opacity: 1; }
   );
   .@{name} {
     position: relative;
