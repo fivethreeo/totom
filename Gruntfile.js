@@ -33,7 +33,16 @@
               pretty: true
             },
             files: {
-              "./server/index.html": ["./assets/jade/*.jade"]
+              "./server/index.html": ["./assets/jade/index.jade"] 
+              /*
+              "./server/bandet.html": ["./assets/jade/index.jade"],
+              "./server/cd.html": ["./assets/jade/index.jade"],
+              "./server/historie.html": ["./assets/jade/index.jade"],
+              "./server/bilder.html": ["./assets/jade/index.jade"],
+              "./server/linker.html": ["./assets/jade/index.jade"],
+              "./server/nyheter.html": ["./assets/jade/index.jade"],
+              "./server/jubileum.html": ["./assets/jade/index.jade"]
+              */
             }
           }
         },

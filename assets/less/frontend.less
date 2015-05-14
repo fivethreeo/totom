@@ -6,145 +6,9 @@
  */
 html,
 body {
- // overflow-x: hidden; /* Prevent scroll on narrow devices */
-}
-body {
-  padding-top: 70px;
-}
-footer {
-  padding: 30px 0;
+
 }
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
-}
-
-.tree, .tree ul {
-    margin:0;
-    padding:0;
-    list-style:none
-}
-.tree ul {
-    margin-left:1em;
-    position:relative
-}
-.tree ul ul {
-    margin-left:.5em
-}
-.tree ul:before {
-    content:"";
-    display:block;
-    width:0;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    border-left:1px solid
-}
-.tree li {
-    margin:0;
-    padding:0 1em;
-    line-height:2em;
-    color:#369;
-    font-weight:700;
-    position:relative
-}
-.tree ul li:before {
-    content:"";
-    display:block;
-    width:10px;
-    height:0;
-    border-top:1px solid;
-    margin-top:-1px;
-    position:absolute;
-    top:1em;
-    left:0
-}
-.tree ul li:last-child:before {
-    background:#fff;
-    height:auto;
-    top:1em;
-    bottom:0
-}
-.indicator {
-    margin-right:5px;
-}
-.tree li a {
-    text-decoration: none;
-    color:#369;
-}
-.tree li button, .tree li button:active, .tree li button:focus {
-    text-decoration: none;
-    color:#369;
-    border:none;
-    background:transparent;
-    margin:0px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
-    outline: 0;
-}
-
-@keyframes slideinleft {
-  from { left: -400px; opacity: 0; }
-  to { left: 0px; opacity: 1; }
-}
-
-.slideinleft {
-    position: relative;
-    animation-name: slideinleft;
-    animation-duration: 2s;
-}
-
-@keyframes slideinright {
-  from { left: 400px; opacity: 0; }
-  to { left: 0px; opacity: 1; }
-}
-
-.slideinright {
-    position: relative;
-    animation-name: slideinright;
-    animation-duration: 2s;
-}
 .keyframes(@name, @from, @to) {
     @frames: {
         from { @from(); }
@@ -156,21 +20,20 @@ footer {
     }
 }
 
-.loop(8);
+.dummy {
+    margin-top: 100%;
+}
+.thumbnail {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    text-align:center;
+    padding-top:calc(50% - 30px);
+}
 
-.loop(@counter) when (@counter > 0) {
-  .loop((@counter - 1));    // next iteration
-    @name: ~"slidein@{counter}";
-    .keyframes(@name, {
-      left: unit(`Math.floor(200 * Math.sin(Math.random() * 360))`, px);
-      top: unit(`Math.floor(200 * Math.cos(Math.random() * 360))`, px); 
-      opacity: 0; 
-      },
-      { left: 0px; top: 0px; opacity: 1; }
-  );
-  .@{name} {
-    position: relative;
-    animation-name: ~"@{name}";
-    animation-duration: 2s;
-  }
+.dummyb {
+    margin-top: 100%;
+    margin-bottom: -90px;
 }
