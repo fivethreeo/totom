@@ -26,9 +26,11 @@ body {
 }
 .thumbnail {
     position: absolute;
-
     text-align:center;
-    padding-top:calc(50% - 30px);
+    padding-top:calc(50% - 30px);    top: 0px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
 }
 
 .dummyb {
@@ -36,12 +38,7 @@ body {
     margin-bottom: -90px;
 }
 
-.thumbnail {
-    top: 0px;
-    bottom: 0;
-    left: 0px;
-    right: 0;
-}
+
 @media (min-width: @screen-sm-min) {
   .thumbnail {
     top: 15px;
