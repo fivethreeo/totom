@@ -11,6 +11,8 @@
     npm install less-plugin-autoprefix --save-dev
     npm install -g bower
     
-    bower install bootstrap -S
+    bower install -S bootstrap
+    bower install -S mediaCheck
+    bower install -S jquery'
     
     grunt concat less uglify copy
