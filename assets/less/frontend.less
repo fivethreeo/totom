@@ -35,22 +35,23 @@ body {
     bottom: 0;
     left: 0px;
     right: 0;
+    z-index: 3; 
 }
 
 .menulink span {
-    font-size: 1.5vw;
+    font-size: 1vw;
     clear: both; 
     display: block;
 }
 .menulink span.glyphicon {
-    font-size: 3.5vw;
+    font-size: 3vw;
 }
 .menulink:hover, .menulink:focus  {
     text-decoration: none ! important;
 }
 
 
-.pagecontent {
+.pagewrapper {
     color: white;
     position: absolute;
     text-align:center;
@@ -75,6 +76,15 @@ body {
 .yellowlink { background-color: yellow;}
 .pinklink { background-color: pink;}
 
+@keyframes slide-in {
+  from { left: 500px; opacity: 0; z-index: 0;};
+  to { left: 0px; opacity: 1; z-index: 2; };
+}
+@keyframes slide-out {
+  from { left: 0px; opacity: 1; z-index: 2; };
+  to { left: -500px; opacity: 0; z-index: 0; };
+}
+
 @media (min-width: @screen-sm-min) {
   .menulink {
     top: 15px;
@@ -82,11 +92,34 @@ body {
     left: 15px;
     right: 0;
   }
-  .pagecontent {
+  .pagewrapper {
     top: 15px;
     bottom: 0;
     left: 15px;
     right: 0;
+  }  
+  .pagewrapper .pagecontent {
+    position: absolute;
+    display: none;
   }
+
+  .pagewrapper .pagecontent.target {
+    display: block;
+    animation-duration: 1s;
+    animation-name: slide-in;
+    animation-timing-function: ease-in;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+  
+  .pagewrapper .pagecontent.nottarget {
+    display: block;
+    animation-duration: 1s;
+    animation-name: slide-out;
+    animation-timing-function: ease-in;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+
 }
 

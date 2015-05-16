@@ -1,8 +1,11 @@
 mediaCheck({
   media: '(min-width: 992px)',
   entry: function() {
-    if (window.location.hash=='') window.location.hash = '#hjem';
-    $('.pagecontent').addClass('activateanimation');
+    $('#hjem').addClass('target');
+    $('.menulink').on('click', function() {
+      $('.target').removeClass('target').addClass('nottarget');
+      $($(this).attr('href')).removeClass('nottarget').addClass('target');
+    });
   },
   exit: function() {
     $('.pagecontent').removeClass('activateanimation');
@@ -11,3 +14,4 @@ mediaCheck({
     console.log('changing state 992px');
   }
 });
+
