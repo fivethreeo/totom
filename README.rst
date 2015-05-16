@@ -13,6 +13,6 @@
     
     bower install -S bootstrap
     bower install -S mediaCheck
-    bower install -S jquery'
+    bower install -S jquery
     
     grunt concat less uglify copy
