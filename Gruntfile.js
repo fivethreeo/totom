@@ -84,7 +84,7 @@
               'bower_components/bootstrap/dist/js/bootstrap.js',
               'assets/javascript/frontend.js'
               ],   
-            tasks: ['concat:js_frontend'] // ,'uglify:frontend'],     //tasks to run
+            tasks: ['concat:js_frontend'], // ,'uglify:frontend'],     //tasks to run
             options: {
               livereload: true                        //reloads the browser
             }
