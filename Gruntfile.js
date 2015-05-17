@@ -50,7 +50,7 @@
         less: {
           development: {
             options: {
-              compress: false,  //minifying the result
+              // compress: true,  //minifying the result
               plugins : [ new (require('less-plugin-autoprefix'))({browsers : [ 'last 2 versions', 'ie 9' ]}) ]
             },
             files: {
@@ -84,7 +84,7 @@
               'bower_components/bootstrap/dist/js/bootstrap.js',
               'assets/javascript/frontend.js'
               ],   
-            tasks: ['concat:js_frontend','uglify:frontend'],     //tasks to run
+            tasks: ['concat:js_frontend'] // ,'uglify:frontend'],     //tasks to run
             options: {
               livereload: true                        //reloads the browser
             }
