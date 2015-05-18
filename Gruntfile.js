@@ -141,6 +141,20 @@
             dest: 'server/static/',
             flatten: false
           }
+        },
+        buildcontrol: {
+          options: {
+            dir: 'server',
+            commit: true,
+            push: true,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+          },
+          pages: {
+            options: {
+              remote: 'git@github.com:fivethreeo/totom.git',
+              branch: 'gh-pages'
+            }
+          }
         }
       });
 
@@ -152,6 +166,7 @@
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-build-control');
 
   // Task definition
   grunt.registerTask('default', ['watch']);
