@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "mediaCheck": "~0.4.6",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "ckeditor": "~4.4.7"
   }
 }
